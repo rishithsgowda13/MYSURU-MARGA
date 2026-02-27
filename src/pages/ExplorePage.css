@@ -1,0 +1,117 @@
+.explore-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Header & Typography Overrides */
+.explore-page h1 {
+    font-size: 1.75rem;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.icon-btn {
+    padding: 0.5rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: var(--border-color);
+}
+
+/* Search Bar */
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.75rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    font-size: 0.875rem;
+    outline: none;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+}
+
+.search-input:focus {
+    border-color: var(--primary);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+.search-input::placeholder {
+    color: #94a3b8;
+    /* Slate 400 */
+}
+
+.filter-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: var(--border-color);
+}
+
+/* Scrollable Chips row */
+.chips-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0.5rem;
+}
+
+.chips-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chips-scroll {
+    /* Prevent wrapping, ensure horizontal scrolling */
+    flex-wrap: nowrap;
+    min-width: min-content;
+}
+
+/* Responsive Grid for Desktop layout container */
+.places-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 500px) {
+
+    /* If the parent container wrapper is 600px wide, maybe show two cards */
+    .places-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-image-wrapper {
+        height: 140px;
+    }
+}

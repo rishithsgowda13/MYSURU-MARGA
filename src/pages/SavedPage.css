@@ -1,0 +1,43 @@
+.saved-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.empty-state-container {
+    flex: 1;
+    padding-top: 20vh;
+}
+
+.empty-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: #fffbeb;
+    /* Light yellow tint */
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f59e0b;
+    /* Amber 500 */
+}
+
+.start-exploring-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(217, 119, 6, 0.2);
+}
+
+.start-exploring-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px -2px rgba(217, 119, 6, 0.3);
+}
+
+.start-exploring-btn:active {
+    transform: translateY(0);
+}
